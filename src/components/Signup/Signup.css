@@ -1,0 +1,54 @@
+.main-container{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+form{
+    display:flex;
+    width:30%;
+    flex-direction: column;
+    justify-content:center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border:2px solid black;
+    padding: 0px 10px;
+    margin-top:50px;
+    border-radius:10px;
+}
+h3{
+    align-self: center;
+}
+label{
+    font-weight:bold;
+    align-self:center;
+    margin-left:4px;
+}
+input{
+    padding:8px;
+    margin-left:4px;
+    width:60%; 
+    align-self: center;
+    border-radius:8px;
+}
+
+button{
+    width:60%;
+    background-color: rgb(22, 186, 226);
+    color:white;
+    padding:8px;
+    cursor:pointer;
+    align-self: center;
+    border-radius: 30px;
+    margin:8px 4px;
+    border:none;
+}
+
+.login-div{
+    border:2px solid black;
+    border-radius: 8px;
+    width:30%;
+    padding:10px;
+    margin-top:10px;
+    text-align: center;
+}
