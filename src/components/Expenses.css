@@ -1,0 +1,23 @@
+.del-btn,.edit-btn{
+   width:fit-content;
+   padding:8px;
+   color:white;
+   font-weight: bold;
+   border-radius:2px;
+   cursor:pointer;
+}
+.del-btn{
+    background-color: red;
+}
+table{
+    border-collapse: collapse;
+    width:100%;
+    margin-top:20px;
+    text-align: center;
+}
+.close-btn{
+  width:fit-content;
+ border-radius:3px;
+ padding: 8px;
+ background-color: rgb(238, 98, 98);
+}

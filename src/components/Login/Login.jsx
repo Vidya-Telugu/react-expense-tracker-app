@@ -12,7 +12,7 @@ function Login() {
     }
     useEffect(()=>{
         if(isLogin){
-            navigate("/welcome")
+            navigate("/expenseform");
         }
     },[navigate,isLogin])
     async function handleSubmit(e){
@@ -42,7 +42,7 @@ function Login() {
         <input type="email" className="login-input"   name="Email" onChange={handleUser} placeholder='Email'></input>
         <input className="login-input" type="password" name="Password" onChange={handleUser} placeholder='Password'></input>
         <button type="submit" className='login'>Login</button>
-        <p>Forgot Password?</p>
+        <Link to="/forgotpassword"><p>Forgot Password?</p></Link>
       </form>
       <div className='sign-up'>
         Don't have an account?<Link to="/signup">Sign up.</Link>
