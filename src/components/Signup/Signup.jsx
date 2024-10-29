@@ -1,7 +1,8 @@
 import React,{useState} from 'react';
 import axios from "axios";
+import { Link } from 'react-router-dom';
 import "./Signup.css";
-function signup() {
+function Signup() {
   const[user,setUser]=useState({Email:"",Password:"",ConfirmPassword:""});
   function handleUser(e){
     setUser((prev)=>({...prev,[e.target.name]:e.target.value}));
@@ -39,10 +40,10 @@ function signup() {
         <button type="submit">Sign up</button>
       </form>
       <div className='login-div'>
-        Have an account?Login
+        Have an account?<Link to="/login">Login</Link>
       </div>
     </div>
   )
 }
 
-export default signup
+export default Signup

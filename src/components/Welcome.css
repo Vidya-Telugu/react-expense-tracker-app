@@ -1,0 +1,12 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(152, 157, 158);
+}
+.complete-now{
+    border:none;
+    color:blue;
+    text-decoration:underline;
+    margin-top:18px;
+    background-color: rgb(152, 157, 158);
+}

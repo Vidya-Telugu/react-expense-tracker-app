@@ -1,11 +1,20 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState} from 'react'
+import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import "./Login.css";
 import axios from "axios";
 function Login() {
+    const navigate=useNavigate();
+    const[isLogin,setIsLogin]=useState(false);
     const[user,setUser]=useState({Email:"",Password:""});
     function handleUser(e){
        setUser((prev)=>({...prev,[e.target.name]:e.target.value}));
     }
+    useEffect(()=>{
+        if(isLogin){
+            navigate("/welcome")
+        }
+    },[navigate,isLogin])
     async function handleSubmit(e){
         e.preventDefault();
         const{Email,Password}=user;
@@ -21,18 +30,23 @@ function Login() {
           localStorage.setItem("token",token);
           const data=localStorage.getItem("token");
           console.log(data);
+          setIsLogin(true);
         }catch(error){
             alert(error.response?.data?.error?.message);
         }
     }
   return (
     <div className="main-container">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className='login-container'>
         <h3>Login</h3>
-        <input type="email"  name="Email" onChange={handleUser} placeholder='Email'></input>
-        <input type="password" name="Password" onChange={handleUser} placeholder='Password'></input>
-        <button type="submit">Login</button>
+        <input type="email" className="login-input"   name="Email" onChange={handleUser} placeholder='Email'></input>
+        <input className="login-input" type="password" name="Password" onChange={handleUser} placeholder='Password'></input>
+        <button type="submit" className='login'>Login</button>
+        <p>Forgot Password?</p>
       </form>
+      <div className='sign-up'>
+        Don't have an account?<Link to="/signup">Sign up.</Link>
+      </div>
     </div>
   )
 }
