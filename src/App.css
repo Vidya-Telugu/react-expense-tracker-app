@@ -1,5 +1,8 @@
-*{
-    margin:0px;
-    padding:0px;
-    box-sizing: border-box;
+.light-theme{
+    background-color:white;
+    color:white;
+}
+.dark-theme{
+    background-color:black;
+    color:gray;
 }

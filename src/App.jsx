@@ -6,12 +6,11 @@ import Profile from "./components/Profile"
 import VerifyEmail from "./components/VerifyEmail"
 import ForgotPassword from "./components/ForgotPassword"
 import ExpenseForm from "./components/ExpenseForm"
+import "./App.css"
 function App() {
-  
-
   return (
-    <>
     <BrowserRouter>
+    <Welcome></Welcome>
     <Routes>
       <Route path="/" element={<Login></Login>}/>
       <Route path="/login" element={<Login></Login>}></Route>
@@ -22,9 +21,7 @@ function App() {
       <Route path="/signup" element={<Signup></Signup>}></Route>
       <Route path="/expenseform" element={<ExpenseForm></ExpenseForm>}></Route>
     </Routes>
-    </BrowserRouter>
-   
-    </>
+    </BrowserRouter>   
   )
 }
 

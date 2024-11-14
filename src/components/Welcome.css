@@ -1,12 +1,23 @@
 .nav{
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(152, 157, 158);
+  display:flex;
+  align-items:center;
+  justify-content:space-evenly;
+  font-weight:bold;
+  text-decoration:none;
+  color:rgb(255, 255, 255);
+  background-color:rgb(0, 0, 0);
+  padding:20px;
+}
+.logout-btn{
+  width:fit-content;
+  padding:8px;
+  border-radius:3px;
+  font-weight: bold;
+  background-color:red;
 }
 .complete-now{
-    border:none;
-    color:blue;
-    text-decoration:underline;
-    margin-top:18px;
-    background-color: rgb(152, 157, 158);
+  width:fit-content;
+  padding:8px;
+  border-radius:3px;
+  font-weight: bold;
 }

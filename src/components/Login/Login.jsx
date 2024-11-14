@@ -24,7 +24,8 @@ function Login() {
             email:Email,
             password:Password,
             returnSecureToken:true,
-          })
+          });
+          setUser({Email:"",Password:""});
           const token=response.data.idToken;
           console.log(token)
           localStorage.setItem("token",token);
@@ -39,8 +40,8 @@ function Login() {
     <div className="main-container">
       <form onSubmit={handleSubmit} className='login-container'>
         <h3>Login</h3>
-        <input type="email" className="login-input"   name="Email" onChange={handleUser} placeholder='Email'></input>
-        <input className="login-input" type="password" name="Password" onChange={handleUser} placeholder='Password'></input>
+        <input type="email" className="login-input" value={user.Email}  name="Email" onChange={handleUser} placeholder='Email'></input>
+        <input className="login-input" type="password" value={user.Password} name="Password" onChange={handleUser} placeholder='Password'></input>
         <button type="submit" className='login'>Login</button>
         <Link to="/forgotpassword"><p>Forgot Password?</p></Link>
       </form>

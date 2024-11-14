@@ -4,7 +4,14 @@
     justify-content:center;
     align-items: center;
 }
-
+.light-theme{
+    background-color:rgb(255, 255, 255);
+    color:black
+}
+.dark-theme{
+    background-color:black;
+    color:gray;
+}
 .login-container{
     display:flex;
     width:30%;

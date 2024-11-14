@@ -2,7 +2,14 @@
     margin:0px;
     padding:0px;
 }
-
+.light-theme{
+    background-color:rgb(255, 255, 255);
+    color:black
+}
+.dark-theme{
+    background-color:black;
+    color:gray;
+}
 .expense-form-container{
     display:flex;
     flex-direction: column;
